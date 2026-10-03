@@ -1,0 +1,338 @@
+[
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": ".gitignore",
+    "release_path": "experiments/images/.gitignore",
+    "source_sha256": "a0945157260b820a14f0a8544023dc728b3916cb1843d6a9e472e17d36cfc451",
+    "release_sha256": "a0945157260b820a14f0a8544023dc728b3916cb1843d6a9e472e17d36cfc451"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "README.md",
+    "release_path": "experiments/images/README.md",
+    "source_sha256": "89627074bb871862c10f38983a5514b3c294584bbf2ae8fc88c015f1b0da46fa",
+    "release_sha256": "89627074bb871862c10f38983a5514b3c294584bbf2ae8fc88c015f1b0da46fa"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "THIRD_PARTY.md",
+    "release_path": "experiments/images/THIRD_PARTY.md",
+    "source_sha256": "9dd03683b9718d5297f796dc8ac3bc367ba259bb2bfe3e1d23d2dcea2cee1e94",
+    "release_sha256": "9dd03683b9718d5297f796dc8ac3bc367ba259bb2bfe3e1d23d2dcea2cee1e94"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "configs/kodak_core.yaml",
+    "release_path": "experiments/images/configs/kodak_core.yaml",
+    "source_sha256": "c5ca233bfcbba9d3d981f8be236f99ad486d7513984db9a33f09699bcc51f8f5",
+    "release_sha256": "c5ca233bfcbba9d3d981f8be236f99ad486d7513984db9a33f09699bcc51f8f5"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "configs/kodak_sl2a.yaml",
+    "release_path": "experiments/images/configs/kodak_sl2a.yaml",
+    "source_sha256": "4197f0ff5981b00dc83b98804eba5971f8c5b256cf3bddd92976b4c2714d6b17",
+    "release_sha256": "4197f0ff5981b00dc83b98804eba5971f8c5b256cf3bddd92976b4c2714d6b17"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "configs/kodak_staf.yaml",
+    "release_path": "experiments/images/configs/kodak_staf.yaml",
+    "source_sha256": "fe3de180379735500104fc819573f683a8a0ee1a95099e8965a9450313a8f066",
+    "release_sha256": "fe3de180379735500104fc819573f683a8a0ee1a95099e8965a9450313a8f066"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "data/kodak/.gitkeep",
+    "release_path": "experiments/images/data/kodak/.gitkeep",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "lsa/__init__.py",
+    "release_path": "experiments/images/lsa/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "lsa/common.py",
+    "release_path": "experiments/images/lsa/common.py",
+    "source_sha256": "002dc47fcf70544a1833fc2b5678905c2f6a759c81a8de73c8c85e386f23ec9a",
+    "release_sha256": "002dc47fcf70544a1833fc2b5678905c2f6a759c81a8de73c8c85e386f23ec9a"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "lsa/models.py",
+    "release_path": "experiments/images/lsa/models.py",
+    "source_sha256": "0bb50b35041b98fe1eff0ee3dfacd743f35f7988fe1e71ac799beedabf2b0233",
+    "release_sha256": "0bb50b35041b98fe1eff0ee3dfacd743f35f7988fe1e71ac799beedabf2b0233"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "lsa/train.py",
+    "release_path": "experiments/images/lsa/train.py",
+    "source_sha256": "de34f5f693586e183d9e8f2ea27aa4cfcf5cb736477e56b92f0cf11aee622447",
+    "release_sha256": "de34f5f693586e183d9e8f2ea27aa4cfcf5cb736477e56b92f0cf11aee622447"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "reference/core_per_image.csv",
+    "release_path": "experiments/images/reference/core_per_image.csv",
+    "source_sha256": "3b75d749010a81c93861ef12f56b0125be2380bef1db6bd0fa3eba53a88fd494",
+    "release_sha256": "3b75d749010a81c93861ef12f56b0125be2380bef1db6bd0fa3eba53a88fd494"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "reference/kodak_sha256.json",
+    "release_path": "experiments/images/reference/kodak_sha256.json",
+    "source_sha256": "f414567340297c7e631c8649e811bb47b1f4ce686663e71fb2b9ac9c35824bec",
+    "release_sha256": "f414567340297c7e631c8649e811bb47b1f4ce686663e71fb2b9ac9c35824bec"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "reference/results.json",
+    "release_path": "experiments/images/reference/results.json",
+    "source_sha256": "0a8d8c980aba5ea69e6cde88fa933f86b16655282cfbebd64b274fe3aee21133",
+    "release_sha256": "0a8d8c980aba5ea69e6cde88fa933f86b16655282cfbebd64b274fe3aee21133"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "reference/sl2a_per_image.csv",
+    "release_path": "experiments/images/reference/sl2a_per_image.csv",
+    "source_sha256": "1722f620385f473b42003d760cba01571bbf716348347080007d5738b11ee9aa",
+    "release_sha256": "1722f620385f473b42003d760cba01571bbf716348347080007d5738b11ee9aa"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "reference/staf_per_image.csv",
+    "release_path": "experiments/images/reference/staf_per_image.csv",
+    "source_sha256": "d95e364e99066280a6a45b53f3917258e0456ba225a9f72a88212c626cabf494",
+    "release_sha256": "d95e364e99066280a6a45b53f3917258e0456ba225a9f72a88212c626cabf494"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "requirements.txt",
+    "release_path": "experiments/images/requirements.txt",
+    "source_sha256": "241f347554c6a91c5d6e284e455f32bcc23d468eb4a9be0412c78abdd96752a2",
+    "release_sha256": "241f347554c6a91c5d6e284e455f32bcc23d468eb4a9be0412c78abdd96752a2"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "scripts/check_reference.py",
+    "release_path": "experiments/images/scripts/check_reference.py",
+    "source_sha256": "bffa77c8bf86692a184b78801017804d8a5cac50591220febae0f523cb4e6b24",
+    "release_sha256": "bffa77c8bf86692a184b78801017804d8a5cac50591220febae0f523cb4e6b24"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "scripts/download_kodak.py",
+    "release_path": "experiments/images/scripts/download_kodak.py",
+    "source_sha256": "4f9d5bbe7f0a8cc0cd30d9a021b99ac628751882819c05754e249a85a06440e0",
+    "release_sha256": "4f9d5bbe7f0a8cc0cd30d9a021b99ac628751882819c05754e249a85a06440e0"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "scripts/run.py",
+    "release_path": "experiments/images/scripts/run.py",
+    "source_sha256": "81cea41b67a826f38302fb8008c2e7529e0cf7381d06b2694f860607529e9bb9",
+    "release_sha256": "81cea41b67a826f38302fb8008c2e7529e0cf7381d06b2694f860607529e9bb9"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "scripts/summarize.py",
+    "release_path": "experiments/images/scripts/summarize.py",
+    "source_sha256": "64a49998932212aeb2b55d3e9f9bb60d220f405c4ed3c7ff6e7a08f43936a039",
+    "release_sha256": "64a49998932212aeb2b55d3e9f9bb60d220f405c4ed3c7ff6e7a08f43936a039"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "third_party/__init__.py",
+    "release_path": "experiments/images/third_party/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "third_party/finer.py",
+    "release_path": "experiments/images/third_party/finer.py",
+    "source_sha256": "0d4cc8b44beecf8d6e381b7ad6bb7f3511601731e044d3e2ab29a955a0b95f45",
+    "release_sha256": "0d4cc8b44beecf8d6e381b7ad6bb7f3511601731e044d3e2ab29a955a0b95f45"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "third_party/licenses/SL2A_LICENSE",
+    "release_path": "experiments/images/third_party/licenses/SL2A_LICENSE",
+    "source_sha256": "9470be4b6e8619baed7dfd0abed3756cc54051effb9801b356db017817c16801",
+    "release_sha256": "9470be4b6e8619baed7dfd0abed3756cc54051effb9801b356db017817c16801"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "third_party/licenses/STAF_LICENSE",
+    "release_path": "experiments/images/third_party/licenses/STAF_LICENSE",
+    "source_sha256": "28557edd6c4e0b8ada38053c5ac8a03e8e0036b4a6dcc132ffb9c3239c0dd638",
+    "release_sha256": "28557edd6c4e0b8ada38053c5ac8a03e8e0036b4a6dcc132ffb9c3239c0dd638"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "third_party/sl2a.py",
+    "release_path": "experiments/images/third_party/sl2a.py",
+    "source_sha256": "53290b07ba32c9a4b7296fcc14cd1ffd1db1645d68ab9c6b8dc06234ba0487aa",
+    "release_sha256": "53290b07ba32c9a4b7296fcc14cd1ffd1db1645d68ab9c6b8dc06234ba0487aa"
+  },
+  {
+    "source_archive": "learnable-spectral-activations-main.zip",
+    "source_path": "third_party/staf.py",
+    "release_path": "experiments/images/third_party/staf.py",
+    "source_sha256": "40960c296e5e489a7f3c2d542975fde80dc93edb2d4cd77e22b8c7cd0ff45554",
+    "release_sha256": "40960c296e5e489a7f3c2d542975fde80dc93edb2d4cd77e22b8c7cd0ff45554"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": ".gitignore",
+    "release_path": "experiments/audio/.gitignore",
+    "source_sha256": "4971b6e3e23c86c23a6f717f7f6979ee9335f67442747425330eb9d85036064f",
+    "release_sha256": "4971b6e3e23c86c23a6f717f7f6979ee9335f67442747425330eb9d85036064f"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "FINER/__init__.py",
+    "release_path": "experiments/audio/FINER/__init__.py",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "release_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "FINER/models.py",
+    "release_path": "experiments/audio/FINER/models.py",
+    "source_sha256": "5c995750d0bf2e509f3a03ce8b6d9c953bc5f36c69e5d8d39a89e50a27f97413",
+    "release_sha256": "5c995750d0bf2e509f3a03ce8b6d9c953bc5f36c69e5d8d39a89e50a27f97413"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "README.md",
+    "release_path": "experiments/audio/README.md",
+    "source_sha256": "43b9b4aace6e2215cdd95096a907d9f43fb0dd1c800cf082d8155e25e598bba5",
+    "release_sha256": "43b9b4aace6e2215cdd95096a907d9f43fb0dd1c800cf082d8155e25e598bba5"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "SL2A-INR/ChebyKANLayer.py",
+    "release_path": "experiments/audio/SL2A-INR/ChebyKANLayer.py",
+    "source_sha256": "cc1c0e803444716fd10c5ec8308b72e57612351504698120841aa7d81e12ecec",
+    "release_sha256": "cc1c0e803444716fd10c5ec8308b72e57612351504698120841aa7d81e12ecec"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "SL2A-INR/SL2A_INR.py",
+    "release_path": "experiments/audio/SL2A-INR/SL2A_INR.py",
+    "source_sha256": "6345e8072cf22c86140a31c8cd9c0bdc2d460ba133a418707528806b6225338e",
+    "release_sha256": "6345e8072cf22c86140a31c8cd9c0bdc2d460ba133a418707528806b6225338e"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "fKAN-main/fkan/__init__.py",
+    "release_path": "experiments/audio/fKAN-main/fkan/__init__.py",
+    "source_sha256": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700",
+    "release_sha256": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "fKAN-main/fkan/jacobi_polynomials.py",
+    "release_path": "experiments/audio/fKAN-main/fkan/jacobi_polynomials.py",
+    "source_sha256": "c4e750dde02122a760203ee243e8a342a734ab6656d6cd40eeae53187482ab94",
+    "release_sha256": "c4e750dde02122a760203ee243e8a342a734ab6656d6cd40eeae53187482ab94"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "fKAN-main/fkan/torch.py",
+    "release_path": "experiments/audio/fKAN-main/fkan/torch.py",
+    "source_sha256": "ad6cf3799e058d265afa379f17bdb1023c012edcc52fbc26380c87d0333afe6e",
+    "release_sha256": "ad6cf3799e058d265afa379f17bdb1023c012edcc52fbc26380c87d0333afe6e"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "manifests/librispeech_pilot40_manifest.csv",
+    "release_path": "experiments/audio/manifests/librispeech_pilot40_manifest.csv",
+    "source_sha256": "3fbe7cc6b3c271df2417dbd0089cd6f2b41ab59de6ad10498eb0e3887929a057",
+    "release_sha256": "3fbe7cc6b3c271df2417dbd0089cd6f2b41ab59de6ad10498eb0e3887929a057"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "manifests/nsynth_pilot10_manifest.csv",
+    "release_path": "experiments/audio/manifests/nsynth_pilot10_manifest.csv",
+    "source_sha256": "18d4a574e975aca860d7bef4302d3ee52fc4b108c46bf560b437b95786b77cc2",
+    "release_sha256": "18d4a574e975aca860d7bef4302d3ee52fc4b108c46bf560b437b95786b77cc2"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "requirements.txt",
+    "release_path": "experiments/audio/requirements.txt",
+    "source_sha256": "7cd5831e7216b9164d44c85047279a05ecba41a64ce0a8922a1cf79f2eef4b39",
+    "release_sha256": "7cd5831e7216b9164d44c85047279a05ecba41a64ce0a8922a1cf79f2eef4b39"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "results/expected/main_paper_audio_expected.csv",
+    "release_path": "experiments/audio/results/expected/main_paper_audio_expected.csv",
+    "source_sha256": "03c86326a793a4ae6709cdd2a05c5bd2d1100ee851a17f241c830f731d8d8f4d",
+    "release_sha256": "03c86326a793a4ae6709cdd2a05c5bd2d1100ee851a17f241c830f731d8d8f4d"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "results/reproduced/main_paper_audio_audit.txt",
+    "release_path": "provenance/historical_audio/reproduced/main_paper_audio_audit.txt",
+    "source_sha256": "ac4ecea4d286caff0ec85d1830ac396b87ffc02ec8939f6d3299ab3e67e9ccd9",
+    "release_sha256": "ac4ecea4d286caff0ec85d1830ac396b87ffc02ec8939f6d3299ab3e67e9ccd9"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "results/reproduced/main_paper_audio_recreated_summary.csv",
+    "release_path": "provenance/historical_audio/reproduced/main_paper_audio_recreated_summary.csv",
+    "source_sha256": "5bf23dd9cf41c119cad03b9579ffacc6ff031eabc3879e7ac200a7ef35b8e10d",
+    "release_sha256": "5bf23dd9cf41c119cad03b9579ffacc6ff031eabc3879e7ac200a7ef35b8e10d"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "scripts/audit_main_audio.py",
+    "release_path": "experiments/audio/scripts/audit_main_audio.py",
+    "source_sha256": "2c0ba33c1b7d59b1392d4d5de4342bf5fae77260e25edff175a176710caaad64",
+    "release_sha256": "2c0ba33c1b7d59b1392d4d5de4342bf5fae77260e25edff175a176710caaad64"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "scripts/download_data.sh",
+    "release_path": "experiments/audio/scripts/download_data.sh",
+    "source_sha256": "15e93a27abe1c838ea56f09686bad821e24c2c981152d1faea1fdfab6994ca0b",
+    "release_sha256": "15e93a27abe1c838ea56f09686bad821e24c2c981152d1faea1fdfab6994ca0b"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "scripts/reproduce_main_audio.sh",
+    "release_path": "experiments/audio/scripts/reproduce_main_audio.sh",
+    "source_sha256": "374edfce9ca0783ae240c0bc4539604d05bddff40a40ea80604bd502d8363c95",
+    "release_sha256": "374edfce9ca0783ae240c0bc4539604d05bddff40a40ea80604bd502d8363c95"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "scripts/run_core_audio.py",
+    "release_path": "experiments/audio/scripts/run_core_audio.py",
+    "source_sha256": "fe943b82b5f40db363c5e0c6bd07731f65092dd36faa0e271aba84daec92a4b9",
+    "release_sha256": "aa94ea3fd11a05402e2c967136320fec989f2c74fe50928906098d9cae460aea"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "scripts/run_fjnb_audio.py",
+    "release_path": "experiments/audio/scripts/run_fjnb_audio.py",
+    "source_sha256": "0ebcfb5c63e81777d282f9cb7d1d04a75da6831e02209b7c4268a4876ca3b5a5",
+    "release_sha256": "7f0bc2cddc2c49264876033f0930f3d3084a97844bc94f8999f1d15e5fed3ca8"
+  },
+  {
+    "source_archive": "LSA-audio-main-release-main.zip",
+    "source_path": "scripts/run_sl2a_audio.py",
+    "release_path": "experiments/audio/scripts/run_sl2a_audio.py",
+    "source_sha256": "647b17938080d5ce457f6324d50f029ee052d4ded6959a6a2e3eeffaacc381b2",
+    "release_sha256": "5afb6910b1ed6088648b504148a921732fe7f6567d428eca2ea9f3fb15947198"
+  }
+]

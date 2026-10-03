@@ -1,0 +1,2 @@
+-r ../requirements.txt
+torch==2.10.0+cu130

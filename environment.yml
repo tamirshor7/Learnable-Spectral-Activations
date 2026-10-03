@@ -1,0 +1,10 @@
+name: lsa-unified
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.19
+  - pip=25.3
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - torch==2.10.0+cu130
+      - -r environments/requirements-cu130.lock.txt

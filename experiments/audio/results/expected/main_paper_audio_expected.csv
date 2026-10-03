@@ -1,0 +1,19 @@
+section,dataset,method,config,group,target_n,expected_mean_psnr
+fjnb,librispeech,fJNB,FF16 sigma=100,librispeech_fkan_ff16_s100_q6_lr1em3_bs4096_48k_v1,40,43.97
+fjnb,librispeech,fJNB,raw,librispeech_fkan_noff_q2_lr1em3_bs4096_48k_v1,40,25.23
+fjnb,nsynth,fJNB,FF16 sigma=100,nsynth_fkan_ff16_s100_q6_lr1em3_bs4096_48k_v1,10,55.09
+fjnb,nsynth,fJNB,raw,nsynth_fkan_noff_q6_lr1em3_bs4096_48k_v1,10,16.45
+main,librispeech,FINER,FF16 sigma=20 fbs=20,librispeech_ff16_finer_48k_sigma20_v1,40,66.320429
+main,librispeech,LSA,FF16 sigma=100 K=16,librispeech_act16_ff16_sigma100_K16_lr2em3_am3p0_48k_full_v1,40,90.779016
+main,librispeech,SIREN,noFF w0=30,librispeech_siren_noff_48k_audit_v1,40,32.645249
+main,nsynth,FINER,FF16 sigma=20 fbs=20,nsynth_ff16_finer_48k_sigma20_v1,10,67.188208
+main,nsynth,LSA,FF16 sigma=100 K=16,nsynth_act16_ff16_sigma100_K16_lr2em3_am3p0_48k_full_v1,10,86.718373
+main,nsynth,SIREN,noFF w0=30,nsynth_siren_noff_48k_audit_v1,10,46.764392
+sl2a,librispeech,SL2A,deg=256 rank=128 lr=1e-3,librispeech_sl2a_deg256_rank128_lr1em3_sched_48k_v1,40,38.838304
+sl2a,librispeech,SL2A,deg=256 rank=64 lr=1e-3,librispeech_sl2a_deg256_rank64_lr1em3_sched_48k_v1,40,38.367084
+sl2a,librispeech,SL2A,deg=512 rank=128 lr=1e-3,librispeech_sl2a_deg512_rank128_lr1em3_sched_48k_v1,40,47.416449
+sl2a,librispeech,SL2A,deg=512 rank=64 lr=1e-3,librispeech_sl2a_deg512_rank64_lr1em3_sched_48k_v1,40,46.348241
+sl2a,nsynth,SL2A,deg=256 rank=128 lr=1e-3,nsynth_sl2a_deg256_rank128_lr1em3_sched_48k_v1,10,59.163415
+sl2a,nsynth,SL2A,deg=256 rank=64 lr=1e-3,nsynth_sl2a_deg256_rank64_lr1em3_sched_48k_v1,10,59.46672
+sl2a,nsynth,SL2A,deg=512 rank=128 lr=1e-3,nsynth_sl2a_deg512_rank128_lr1em3_sched_48k_v1,10,68.033858
+sl2a,nsynth,SL2A,deg=512 rank=64 lr=1e-3,nsynth_sl2a_deg512_rank64_lr1em3_sched_48k_v1,10,67.161645

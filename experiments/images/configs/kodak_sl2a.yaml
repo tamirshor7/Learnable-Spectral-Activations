@@ -1,0 +1,50 @@
+suite: sl2a
+data_root: data/kodak
+output_root: outputs/kodak_sl2a
+images:
+  - kodim01
+  - kodim02
+  - kodim03
+  - kodim04
+  - kodim05
+  - kodim06
+  - kodim07
+  - kodim08
+  - kodim09
+  - kodim10
+  - kodim11
+  - kodim12
+  - kodim13
+  - kodim14
+  - kodim15
+  - kodim16
+  - kodim17
+  - kodim18
+  - kodim19
+  - kodim20
+  - kodim21
+  - kodim22
+  - kodim23
+  - kodim24
+calibration_images: [kodim02, kodim05, kodim07, kodim10, kodim13, kodim23]
+learning_rates: [0.0005, 0.001, 0.002, 0.004, 0.008]
+common:
+  steps: 5000
+  batch_size: 65536
+  eval_every: 100
+  eval_chunk: 16384
+  seed: 0
+  save_best_image: false
+conditions:
+  full:
+    width: 256
+    hidden_layers: 3
+    degree: 256
+    rank: 128
+    parameters: 330243
+  parameter_matched:
+    width: 256
+    hidden_layers: 3
+    degree: 192
+    rank: 64
+    parameters: 199171

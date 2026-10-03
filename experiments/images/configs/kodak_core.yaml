@@ -1,0 +1,58 @@
+suite: core
+data_root: data/kodak
+output_root: outputs/kodak_core
+images:
+  - kodim01
+  - kodim02
+  - kodim03
+  - kodim04
+  - kodim05
+  - kodim06
+  - kodim07
+  - kodim08
+  - kodim09
+  - kodim10
+  - kodim11
+  - kodim12
+  - kodim13
+  - kodim14
+  - kodim15
+  - kodim16
+  - kodim17
+  - kodim18
+  - kodim19
+  - kodim20
+  - kodim21
+  - kodim22
+  - kodim23
+  - kodim24
+calibration_images: [kodim02, kodim05, kodim07, kodim10, kodim13, kodim23]
+common:
+  steps: 5000
+  batch_size: 65536
+  eval_every: 100
+  eval_chunk: 65536
+  seed: 0
+  save_best_image: false
+lsa:
+  width: 256
+  hidden_layers: 3
+  harmonics: 32
+  parameters: 199043
+  candidates:
+    - {name: lr5em4_actlr2p0, lr: 0.0005, act_lr_mult: 2.0}
+    - {name: lr1em3_actlr2p0, lr: 0.001, act_lr_mult: 2.0}
+    - {name: lr1em3_actlr1p0, lr: 0.001, act_lr_mult: 1.0}
+finer:
+  width: 256
+  hidden_layers: 3
+  w0: 30.0
+  first_bias_scale: 0.70710678
+  lr: 0.0005
+  parameters: 198915
+siren:
+  width: 256
+  hidden_layers: 3
+  w0: 30.0
+  lr: 0.0005
+  parameters: 198915

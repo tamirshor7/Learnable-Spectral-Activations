@@ -1,0 +1,28 @@
+--- source/run_sl2a_audio.py
++++ release/run_sl2a_audio.py
+@@ -1,6 +1,7 @@
+ from __future__ import annotations
+ 
+ import argparse
++import os
+ import json
+ import math
+ import sys
+@@ -216,7 +217,7 @@
+     args = ap.parse_args()
+ 
+     manifest = pd.read_csv(args.manifest)
+-    out_root = ROOT / "outputs/runs" / args.group
++    out_root = Path(os.environ.get("LSA_AUDIO_OUTPUT_ROOT", str(ROOT / "outputs"))) / "runs" / args.group
+     out_root.mkdir(parents=True, exist_ok=True)
+ 
+     rows = []
+@@ -258,7 +259,7 @@
+         rows.append(summary)
+         print(f"DONE {sample_id} {res['psnr']:.6f} step {res['best_step']} params {res['params']}", flush=True)
+ 
+-    out_sum = ROOT / "outputs/summaries" / f"{args.group}.csv"
++    out_sum = Path(os.environ.get("LSA_AUDIO_OUTPUT_ROOT", str(ROOT / "outputs"))) / "summaries" / f"{args.group}.csv"
+     out_sum.parent.mkdir(parents=True, exist_ok=True)
+     pd.DataFrame(rows).to_csv(out_sum, index=False)
+     print("WROTE", out_sum)

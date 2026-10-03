@@ -1,0 +1,61 @@
+{
+  "runtime": {
+    "python": "3.10.19",
+    "torch": "2.10.0+cu130",
+    "cuda_runtime": "13.0",
+    "cudnn": 91501,
+    "numpy": "2.2.6",
+    "pillow": "12.0.0",
+    "scikit_image": "0.25.2",
+    "pyyaml": "6.0.3",
+    "gpu": "NVIDIA RTX A6000",
+    "driver": "580.173.02"
+  },
+  "core": {
+    "lsa_selected_candidate": "lr5em4_actlr2p0",
+    "lsa_candidate_calibration_mean_psnr": {
+      "lr5em4_actlr2p0": 38.305754967154584,
+      "lr1em3_actlr2p0": 37.86390863152509,
+      "lr1em3_actlr1p0": 37.73966013356392
+    },
+    "lsa_global_all24_psnr": 38.11022342734049,
+    "lsa_global_holdout18_psnr": 38.04504624740247,
+    "lsa_per_image_tuned_all24_psnr": 38.30848677670549,
+    "finer_all24_psnr": 37.31730565565635,
+    "siren_all24_psnr": 34.99000864296813,
+    "lsa_parameters": 199043,
+    "finer_parameters": 198915,
+    "siren_parameters": 198915
+  },
+  "staf": {
+    "candidates_per_image": 56,
+    "staf_all24_psnr": 35.42505362470489,
+    "lsa_per_image_tuned_all24_psnr": 38.30848677670549,
+    "mean_lsa_minus_staf_psnr": 2.8834331520006082,
+    "lsa_psnr_wins": 24,
+    "lsa_ssim_wins": 24
+  },
+  "sl2a": {
+    "selected_learning_rates": {
+      "full": 0.004,
+      "parameter_matched": 0.004
+    },
+    "full_parameters": 330243,
+    "parameter_matched_parameters": 199171,
+    "full_all24_psnr": 38.29814599592129,
+    "full_holdout18_psnr": 38.25654137658052,
+    "parameter_matched_all24_psnr": 35.9953679155357,
+    "parameter_matched_holdout18_psnr": 35.90981808387565,
+    "lsa_global_all24_psnr": 38.11022342734049,
+    "lsa_global_holdout18_psnr": 38.04504624740247,
+    "lsa_minus_full_holdout_psnr": -0.211495129178059,
+    "lsa_minus_parameter_matched_holdout_psnr": 2.1352281635268184,
+    "lsa_full_holdout_wins": 8,
+    "lsa_parameter_matched_holdout_wins": 18
+  },
+  "upstream_commits": {
+    "FINER": "51a9254e371b1cbfacc408aee7a6d215d6fa0057",
+    "STAF": "3303cf48c2501f56a4207960a88efe4d803b1f33",
+    "SL2A": "3bee9c07890a1dade2207b76cb8cc623f6711784"
+  }
+}

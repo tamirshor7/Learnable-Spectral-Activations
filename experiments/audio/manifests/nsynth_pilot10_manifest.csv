@@ -1,0 +1,11 @@
+family,clip_id,wav_path
+bass,bass_synthetic_009-009-025,data/nsynth-valid/audio/bass_synthetic_009-009-025.wav
+brass,brass_acoustic_006-024-025,data/nsynth-valid/audio/brass_acoustic_006-024-025.wav
+flute,flute_synthetic_000-021-025,data/nsynth-valid/audio/flute_synthetic_000-021-025.wav
+guitar,guitar_acoustic_010-021-025,data/nsynth-valid/audio/guitar_acoustic_010-021-025.wav
+keyboard,keyboard_synthetic_000-021-050,data/nsynth-valid/audio/keyboard_synthetic_000-021-050.wav
+mallet,mallet_acoustic_047-065-050,data/nsynth-valid/audio/mallet_acoustic_047-065-050.wav
+organ,organ_electronic_001-036-025,data/nsynth-valid/audio/organ_electronic_001-036-025.wav
+reed,reed_acoustic_011-035-025,data/nsynth-valid/audio/reed_acoustic_011-035-025.wav
+string,string_acoustic_012-024-025,data/nsynth-valid/audio/string_acoustic_012-024-025.wav
+vocal,vocal_acoustic_000-050-075,data/nsynth-valid/audio/vocal_acoustic_000-050-075.wav

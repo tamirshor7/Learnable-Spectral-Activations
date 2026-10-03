@@ -1,0 +1,48 @@
+suite: staf
+data_root: data/kodak
+output_root: outputs/kodak_staf
+images:
+  - kodim01
+  - kodim02
+  - kodim03
+  - kodim04
+  - kodim05
+  - kodim06
+  - kodim07
+  - kodim08
+  - kodim09
+  - kodim10
+  - kodim11
+  - kodim12
+  - kodim13
+  - kodim14
+  - kodim15
+  - kodim16
+  - kodim17
+  - kodim18
+  - kodim19
+  - kodim20
+  - kodim21
+  - kodim22
+  - kodim23
+  - kodim24
+common:
+  steps: 5000
+  batch_size: 65536
+  eval_every: 100
+  eval_chunk: 65536
+  seed: 0
+  save_best_image: false
+model:
+  width: 256
+  hidden_layers: 3
+  first_omega: 60.0
+  hidden_omega: 30.0
+base_grid:
+  tau: [3, 5, 8, 16]
+  lr: [0.00025, 0.0005, 0.001, 0.002]
+  schedule: [constant, decay0p1, decay0p05]
+boundary_grid:
+  tau: [3]
+  lr: [0.003, 0.005, 0.01, 0.02]
+  schedule: [decay0p1, decay0p05]

@@ -1,0 +1,25 @@
+MAIN_PAPER_AUDIO_RECREATION
+Included sections: main, sl2a, fjnb
+Excluded sections: staf, wire
+
+section     dataset method                   config  n  target_n  complete  mean_psnr  expected_mean_psnr  diff_vs_expected                                                        group
+   fjnb librispeech   fJNB           FF16 sigma=100 40        40      True  43.974215           43.970000      4.215303e-03           librispeech_fkan_ff16_s100_q6_lr1em3_bs4096_48k_v1
+   fjnb librispeech   fJNB                      raw 40        40      True  25.228698           25.230000     -1.302362e-03                librispeech_fkan_noff_q2_lr1em3_bs4096_48k_v1
+   fjnb      nsynth   fJNB           FF16 sigma=100 10        10      True  55.091773           55.090000      1.773478e-03                nsynth_fkan_ff16_s100_q6_lr1em3_bs4096_48k_v1
+   fjnb      nsynth   fJNB                      raw 10        10      True  16.449837           16.450000     -1.627600e-04                     nsynth_fkan_noff_q6_lr1em3_bs4096_48k_v1
+   main librispeech  FINER     FF16 sigma=20 fbs=20 40        40      True  66.320429           66.320429      4.498437e-07                        librispeech_ff16_finer_48k_sigma20_v1
+   main librispeech    LSA      FF16 sigma=100 K=16 40        40      True  90.779016           90.779016     -1.269507e-08 librispeech_act16_ff16_sigma100_K16_lr2em3_am3p0_48k_full_v1
+   main librispeech  SIREN               noFF w0=30 40        40      True  32.645249           32.645249     -1.580793e-07                          librispeech_siren_noff_48k_audit_v1
+   main      nsynth  FINER     FF16 sigma=20 fbs=20 10        10      True  67.188208           67.188208      4.105085e-07                             nsynth_ff16_finer_48k_sigma20_v1
+   main      nsynth    LSA      FF16 sigma=100 K=16 10        10      True  86.718373           86.718373     -1.904837e-07      nsynth_act16_ff16_sigma100_K16_lr2em3_am3p0_48k_full_v1
+   main      nsynth  SIREN               noFF w0=30 10        10      True  46.764392           46.764392     -1.478653e-07                               nsynth_siren_noff_48k_audit_v1
+   sl2a librispeech   SL2A deg=256 rank=128 lr=1e-3 40        40      True  38.838304           38.838304     -6.480046e-08          librispeech_sl2a_deg256_rank128_lr1em3_sched_48k_v1
+   sl2a librispeech   SL2A  deg=256 rank=64 lr=1e-3 40        40      True  38.367084           38.367084      3.055872e-07           librispeech_sl2a_deg256_rank64_lr1em3_sched_48k_v1
+   sl2a librispeech   SL2A deg=512 rank=128 lr=1e-3 40        40      True  47.416449           47.416449      3.766479e-07          librispeech_sl2a_deg512_rank128_lr1em3_sched_48k_v1
+   sl2a librispeech   SL2A  deg=512 rank=64 lr=1e-3 40        40      True  46.348241           46.348241      4.176396e-07           librispeech_sl2a_deg512_rank64_lr1em3_sched_48k_v1
+   sl2a      nsynth   SL2A deg=256 rank=128 lr=1e-3 10        10      True  59.163415           59.163415      1.645390e-07               nsynth_sl2a_deg256_rank128_lr1em3_sched_48k_v1
+   sl2a      nsynth   SL2A  deg=256 rank=64 lr=1e-3 10        10      True  59.466720           59.466720      1.097285e-08                nsynth_sl2a_deg256_rank64_lr1em3_sched_48k_v1
+   sl2a      nsynth   SL2A deg=512 rank=128 lr=1e-3 10        10      True  68.033858           68.033858      1.926688e-07               nsynth_sl2a_deg512_rank128_lr1em3_sched_48k_v1
+   sl2a      nsynth   SL2A  deg=512 rank=64 lr=1e-3 10        10      True  67.161645           67.161645     -1.547849e-07                nsynth_sl2a_deg512_rank64_lr1em3_sched_48k_v1
+
+MAIN_PAPER_AUDIO_STATUS=PASS

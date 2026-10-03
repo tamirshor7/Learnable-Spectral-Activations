@@ -1,0 +1,18 @@
+--- source/run_fjnb_audio.py
++++ release/run_fjnb_audio.py
+@@ -243,13 +243,13 @@
+         y = read_audio(wav, args.sample_rate, args.n_samples)
+ 
+         safe_sid = "".join(c if c.isalnum() or c in "-_." else "_" for c in sid)
+-        outdir = root / "outputs/runs" / args.group / f"{args.group}_{safe_sid}"
++        outdir = Path(os.environ.get("LSA_AUDIO_OUTPUT_ROOT", str(root / "outputs"))) / "runs" / args.group / f"{args.group}_{safe_sid}"
+         print(f"START {idx} {sid} wav={wav}", flush=True)
+         summary = train_one(y, args, fJNB, sid, outdir)
+         rows.append(summary)
+         print(f"DONE {sid} {summary['psnr']:.6f} step {summary['best_step']}", flush=True)
+ 
+-    out_summary = root / "outputs/summaries" / f"{args.group}.csv"
++    out_summary = Path(os.environ.get("LSA_AUDIO_OUTPUT_ROOT", str(root / "outputs"))) / "summaries" / f"{args.group}.csv"
+     out_summary.parent.mkdir(parents=True, exist_ok=True)
+     pd.DataFrame(rows).to_csv(out_summary, index=False)
+     print("WROTE", out_summary, flush=True)
