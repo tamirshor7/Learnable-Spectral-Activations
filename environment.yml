@@ -1,4 +1,4 @@
-name: lsa-unified
+name: lsa
 channels:
   - conda-forge
 dependencies:
@@ -7,4 +7,4 @@ dependencies:
   - pip:
       - --extra-index-url https://download.pytorch.org/whl/cu130
       - torch==2.10.0+cu130
-      - -r environments/requirements-cu130.lock.txt
+      - -r requirements.txt

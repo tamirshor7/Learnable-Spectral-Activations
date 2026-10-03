@@ -1,6 +1,0 @@
-torch
-numpy
-pandas
-scipy
-soundfile
-librosa

@@ -1,7 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
-data/
-outputs/
-*.log
-*.pt
+audio/data/
+audio/outputs/
+image_2d/data/
+image_2d/outputs/

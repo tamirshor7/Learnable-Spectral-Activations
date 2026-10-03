@@ -1,13 +1,11 @@
-# Third-party provenance
+# Third-party code
 
-Image upstream provenance is retained verbatim in `experiments/images/THIRD_PARTY.md`:
-
-| Component | Recorded upstream commit | Bundled license text |
+| Code | Source | Recorded image-release commit |
 | --- | --- | --- |
-| FINER/SIREN | liuzhen0212/FINER, 51a9254e371b1cbfacc408aee7a6d215d6fa0057 | No |
-| STAF | AlirezaMorsali/STAF, 3303cf48c2501f56a4207960a88efe4d803b1f33 | MIT text retained under experiments/images/third_party/licenses |
-| SL2A | moeinheidari7829/SL2A-INR, 3bee9c07890a1dade2207b76cb8cc623f6711784 | MIT text retained under experiments/images/third_party/licenses |
+| FINER and SIREN | [FINER](https://github.com/liuzhen0212/FINER) | `51a9254e371b1cbfacc408aee7a6d215d6fa0057` |
+| STAF | [STAF](https://github.com/AlirezaMorsali/STAF) | `3303cf48c2501f56a4207960a88efe4d803b1f33` |
+| SL2A | [SL2A-INR](https://github.com/moeinheidari7829/SL2A-INR) | `3bee9c07890a1dade2207b76cb8cc623f6711784` |
 
-The audio archive includes FINER, SL2A-INR and fKAN source files without upstream commit/license records. Their exact uploaded bytes are tracked by `provenance/source_files.json`. Image commit IDs do not establish the provenance of the separately supplied audio copies. Confirm those copies against the upstream versions used by the authors and include the corresponding notices before public release.
+The supplied STAF and SL2A license texts are retained in `image_2d/third_party/licenses/`.
 
-The input archives provide no top-level project license or canonical citation metadata. These require an author decision. Dataset distribution terms remain those of Kodak, LibriSpeech and NSynth. This integration supplies code provenance and retains existing notices, and does not assign new licenses to inherited content.
+The audio release contains separate FINER, SL2A, and fKAN copies. Their upstream revisions and license files were not supplied. The table's commit IDs apply to the image release.

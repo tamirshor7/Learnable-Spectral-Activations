@@ -1,9 +1,7 @@
-# Image pins are inherited from the authoritative image release.
 numpy==2.2.6
 Pillow==12.0.0
 PyYAML==6.0.3
 scikit-image==0.25.2
-# Audio pins are a new candidate stack, pending historical GPU validation.
 pandas==2.2.3
 scipy==1.15.3
 soundfile==0.13.1

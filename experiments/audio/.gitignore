@@ -1,8 +1,0 @@
-data/
-outputs/
-__pycache__/
-*.pyc
-*.pyo
-.ipynb_checkpoints/
-*.tar.gz
-*.zip

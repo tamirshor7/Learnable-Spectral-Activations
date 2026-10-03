@@ -1,6 +1,0 @@
-__pycache__/
-*.py[cod]
-.venv/
-.env
-data/kodak/*.png
-outputs/
