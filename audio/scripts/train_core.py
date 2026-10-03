@@ -439,6 +439,7 @@ def train_one(wav, args):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--output-root", type=Path, default=ROOT / "outputs")
     ap.add_argument("--dataset", required=True, choices=["nsynth", "librispeech"])
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--group", required=True)
@@ -469,9 +470,9 @@ def main():
     if args.method == "lsa":
         args.method = "act16"
 
-    out_runs = ROOT / "outputs/runs" / args.group
+    out_runs = args.output_root / "runs" / args.group
     out_runs.mkdir(parents=True, exist_ok=True)
-    out_sum = ROOT / "outputs/summaries"
+    out_sum = args.output_root / "summaries"
     out_sum.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_csv(args.manifest)

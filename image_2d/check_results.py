@@ -9,11 +9,13 @@ from scripts import jobs, summarize
 ROOT = Path(__file__).resolve().parent
 
 
-def check(suite, output, data):
+def check(suite, output, data, core_output=None):
     config = jobs.load_config(ROOT / f"configs/kodak_{suite}.yaml")
     config["output_root"] = output / f"kodak_{suite}"
     config["data_root"] = data
-    core_output = output / "kodak_core"
+    core_output = core_output or output / "kodak_core"
+    if suite == "core":
+        config["output_root"] = core_output
     if suite == "core":
         expected_jobs = jobs.core_jobs(config)
     elif suite == "staf":
@@ -61,10 +63,12 @@ def main():
     parser.add_argument("--suite", choices=["all", "core", "staf", "sl2a"], default="all")
     parser.add_argument("--output-root", type=Path, default=ROOT / "outputs")
     parser.add_argument("--data-root", type=Path, default=ROOT / "data/kodak")
+    parser.add_argument("--core-output", type=Path, default=None, help="Core results, default: <output-root>/kodak_core.")
     args = parser.parse_args()
     suites = ["core", "staf", "sl2a"] if args.suite == "all" else (["core", args.suite] if args.suite != "core" else ["core"])
     for suite in suites:
-        check(suite, args.output_root.resolve(), args.data_root.resolve())
+        check(suite, args.output_root.resolve(), args.data_root.resolve(),
+              args.core_output.resolve() if args.core_output else None)
 
 
 if __name__ == "__main__":

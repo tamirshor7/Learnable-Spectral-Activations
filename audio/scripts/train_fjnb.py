@@ -205,6 +205,7 @@ def train_one(y_np, args, fJNB, sample_id, outdir):
 
 def main():
     p = argparse.ArgumentParser()
+    p.add_argument("--output-root", type=Path, default=Path(__file__).resolve().parents[1] / "outputs")
     p.add_argument("--dataset", required=True)
     p.add_argument("--manifest", required=True)
     p.add_argument("--group", required=True)
@@ -243,13 +244,13 @@ def main():
         y = read_audio(wav, args.sample_rate, args.n_samples)
 
         safe_sid = "".join(c if c.isalnum() or c in "-_." else "_" for c in sid)
-        outdir = root / "outputs/runs" / args.group / f"{args.group}_{safe_sid}"
+        outdir = args.output_root / "runs" / args.group / f"{args.group}_{safe_sid}"
         print(f"START {idx} {sid} wav={wav}", flush=True)
         summary = train_one(y, args, fJNB, sid, outdir)
         rows.append(summary)
         print(f"DONE {sid} {summary['psnr']:.6f} step {summary['best_step']}", flush=True)
 
-    out_summary = root / "outputs/summaries" / f"{args.group}.csv"
+    out_summary = args.output_root / "summaries" / f"{args.group}.csv"
     out_summary.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(rows).to_csv(out_summary, index=False)
     print("WROTE", out_summary, flush=True)

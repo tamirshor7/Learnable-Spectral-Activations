@@ -5,10 +5,10 @@ import tarfile
 import urllib.request
 
 ROOT = Path(__file__).resolve().parent
-SOURCES = [
-    ("https://www.openslr.org/resources/12/dev-clean.tar.gz", "librispeech_raw", "LibriSpeech"),
-    ("https://download.magenta.tensorflow.org/datasets/nsynth/nsynth-valid.jsonwav.tar.gz", "", "nsynth-valid"),
-]
+SOURCES = {
+    "librispeech": ("https://www.openslr.org/resources/12/dev-clean.tar.gz", "librispeech_raw", "LibriSpeech"),
+    "nsynth": ("https://download.magenta.tensorflow.org/datasets/nsynth/nsynth-valid.jsonwav.tar.gz", "", "nsynth-valid"),
+}
 
 
 def download(url, path):
@@ -42,11 +42,14 @@ def extract(archive, destination, folder):
 
 def main():
     parser = argparse.ArgumentParser(description="Download LibriSpeech dev-clean and NSynth validation.")
+    parser.add_argument("--dataset", choices=["nsynth", "librispeech", "both"], default="both")
     parser.add_argument("--out", type=Path, default=ROOT / "data")
     args = parser.parse_args()
     root = args.out.resolve()
     (root / "archives").mkdir(parents=True, exist_ok=True)
-    for url, subdir, folder in SOURCES:
+    datasets = list(SOURCES) if args.dataset == "both" else [args.dataset]
+    for dataset in datasets:
+        url, subdir, folder = SOURCES[dataset]
         archive = root / "archives" / url.rsplit("/", 1)[1]
         download(url, archive)
         extract(archive, root / subdir, folder)

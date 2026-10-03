@@ -188,6 +188,7 @@ def train_one(y_cpu: torch.Tensor, args) -> dict:
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--output-root", type=Path, default=ROOT / "outputs")
     ap.add_argument("--dataset", required=True, choices=["nsynth", "librispeech"])
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--group", required=True)
@@ -216,7 +217,7 @@ def main():
     args = ap.parse_args()
 
     manifest = pd.read_csv(args.manifest)
-    out_root = ROOT / "outputs/runs" / args.group
+    out_root = args.output_root / "runs" / args.group
     out_root.mkdir(parents=True, exist_ok=True)
 
     rows = []
@@ -258,7 +259,7 @@ def main():
         rows.append(summary)
         print(f"DONE {sample_id} {res['psnr']:.6f} step {res['best_step']} params {res['params']}", flush=True)
 
-    out_sum = ROOT / "outputs/summaries" / f"{args.group}.csv"
+    out_sum = args.output_root / "summaries" / f"{args.group}.csv"
     out_sum.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(rows).to_csv(out_sum, index=False)
     print("WROTE", out_sum)
