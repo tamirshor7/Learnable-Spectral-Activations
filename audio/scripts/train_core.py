@@ -251,7 +251,7 @@ def load_audio(path, sample_rate=16000, n_samples=16000):
     path = resolve_audio_file_for_release(path)
     y, sr = sf.read(path)
     if int(sr) != int(sample_rate):
-        # Audit version: resample source audio so we can test a denser coordinate grid.
+        # Resample source audio to the released target sample rate.
         g = math.gcd(int(sr), int(sample_rate))
         up = int(sample_rate) // g
         down = int(sr) // g
@@ -261,7 +261,7 @@ def load_audio(path, sample_rate=16000, n_samples=16000):
     y = y.astype(np.float32)
     y = y[:n_samples] if len(y) >= n_samples else np.pad(y, (0, n_samples - len(y)))
 
-    # Unified official regime for this sweep.
+    # Released target normalization.
     y = y - y.mean()
     y = y / (np.max(np.abs(y)) + 1e-8)
 

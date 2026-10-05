@@ -31,7 +31,7 @@ These experiments fit individual signals from 10 NSynth clips and 40 LibriSpeech
 
 ### Data
 
-Download the **NSynth validation** split from [NSynth](https://magenta.tensorflow.org/datasets/nsynth) and **LibriSpeech dev-clean** from [OpenSLR](https://www.openslr.org/12). The following commands download and extract each archive into the expected location:
+Download the **NSynth validation** split from [NSynth](https://magenta.tensorflow.org/datasets/nsynth) and **LibriSpeech dev-clean and dev-other** from [OpenSLR](https://www.openslr.org/12). The following commands download and extract each archive into the expected location:
 
 ```console
 python audio/download_data.py --dataset nsynth
@@ -40,16 +40,17 @@ python audio/download_data.py --dataset librispeech
 
 To download both in one command, use `--dataset both`. Archives are kept in `audio/data/archives/`.
 
-For manual setup, download [nsynth-valid.jsonwav.tar.gz](https://download.magenta.tensorflow.org/datasets/nsynth/nsynth-valid.jsonwav.tar.gz) and extract it into `audio/data/`. Download [dev-clean.tar.gz](https://www.openslr.org/resources/12/dev-clean.tar.gz) and extract it into `audio/data/librispeech_raw/`. Keep the directories inside each archive. For example, these files must be reachable at:
+For manual setup, download [nsynth-valid.jsonwav.tar.gz](https://huggingface.co/datasets/confit/nsynth/resolve/main/nsynth-valid.jsonwav.tar.gz) and extract it into `audio/data/`. Its expected SHA-256 is `00dea2645fbe0069258567da30807a90825e0bab54c077d6481f253096c4e2a0`. Download both [dev-clean.tar.gz](https://www.openslr.org/resources/12/dev-clean.tar.gz) and [dev-other.tar.gz](https://www.openslr.org/resources/12/dev-other.tar.gz), and extract them into `audio/data/librispeech_raw/`. Keep the directories inside each archive. For example, these files must be reachable at:
 
 ```text
 audio/data/nsynth-valid/audio/bass_synthetic_009-009-025.wav
 audio/data/librispeech_raw/LibriSpeech/dev-clean/1272/128104/1272-128104-0000.flac
+audio/data/librispeech_raw/LibriSpeech/dev-other/116/288045/116-288045-0000.flac
 ```
 
 Existing datasets can be copied or symlinked to those locations. To store them elsewhere, use `--out /path/to/audio-data` when downloading and `--data-root /path/to/audio-data` when training. That directory must contain `nsynth-valid/` and `librispeech_raw/` with the same structure shown above. Only the selected dataset is needed for a single-dataset run.
 
-Keep the original audio files. The training code performs resampling and takes 48,000 samples at 48 kHz. No separate conversion or preprocessing command is needed.
+Keep the original audio files. The training code performs resampling and takes 48,000 samples at 48 kHz. No separate conversion or preprocessing command is needed. The released LSA, FINER, SIREN, and SL2A runs use zero-mean, unit-peak waveform targets. The fJNB comparison preserves its historical preprocessing and uses decoded waveform amplitudes without this normalization.
 
 ### LSA, FINER, and SIREN
 
