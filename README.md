@@ -1,6 +1,12 @@
 # Learnable Spectral Activations
 
-Code for the audio and 2D image-fitting experiments in *Learnable Spectral Activations*. The two experiment directories share one environment and retain their original models, training settings, data subsets, and reference results.
+**Tamir Shor, Or Litany, Alex Bronstein**
+
+This repository contains the official implementation of the NeurIPS 2026 paper: [Learnable Spectral Activations](https://arxiv.org/pdf/TBD)
+
+![Teaser](images/teaser.jpg)
+
+The repository contains the main audio and 2D image-fitting experiments from the paper. The two experiment directories share one environment and retain their original models, training settings, data subsets, and reference results.
 
 ## Installation
 
