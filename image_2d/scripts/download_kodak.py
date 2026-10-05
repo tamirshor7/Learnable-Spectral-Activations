@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HASHES = json.loads((ROOT / "reference" / "kodak_sha256.json").read_text())
+HASHES = json.loads((ROOT / "checksums" / "kodak_sha256.json").read_text())
 BASE = "https://r0k.us/graphics/kodak/kodak"
 
 

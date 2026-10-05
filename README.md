@@ -6,7 +6,7 @@ This repository contains the official implementation of the NeurIPS 2026 paper: 
 
 ![Teaser](images/teaser.jpg)
 
-The repository contains the main audio and 2D image-fitting experiments from the paper. The two experiment directories share one environment and retain their original models, training settings, data subsets, and reference results.
+The repository contains the main audio and 2D image-fitting experiments from the paper. The two experiment directories share one environment and retain their original models, training settings, and data subsets.
 
 ## Installation
 
@@ -29,7 +29,6 @@ The codebase is organized by experiment:
 | `image_2d/` | Python entry points for the core, STAF, and SL2A experiments |
 | `image_2d/lsa/` | Image models and training routines |
 | `image_2d/configs/` | Kodak experiment settings and search grids |
-| `audio/reference/`, `image_2d/reference/` | Results supplied with the original repositories |
 
 ## Audio
 
@@ -156,7 +155,7 @@ image_2d/data/kodak/kodim02.png
 image_2d/data/kodak/kodim24.png
 ```
 
-To use another location, download with `--out /path/to/kodak` and pass `--data-root /path/to/kodak` to training and result-check commands. That directory should contain the PNG files directly.
+To use another location, download with `--out /path/to/kodak` and pass `--data-root /path/to/kodak` to the training commands. That directory should contain the PNG files directly.
 
 ### LSA, FINER, and SIREN
 

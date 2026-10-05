@@ -26,7 +26,7 @@ def load_config(path):
 
 
 def verify_data(config):
-    hashes = json.loads((ROOT / "reference" / "kodak_sha256.json").read_text())
+    hashes = json.loads((ROOT / "checksums" / "kodak_sha256.json").read_text())
     for image in config["images"]:
         name = f"{image}.png"
         path = config["data_root"] / name
