@@ -17,9 +17,9 @@ conda env create -f environment.yml
 conda activate lsa
 ```
 
-The environment installs Python 3.10 and PyTorch 2.10 with CUDA 13.0. GPU training requires a compatible NVIDIA driver. Dependencies for both experiments are included.
+The environment installs Python 3.10 and PyTorch 2.10 with CUDA 13.0.
 
-The code is organized by experiment:
+The codebase is organized by experiment:
 
 | Directory | Contents |
 | --- | --- |
@@ -56,7 +56,7 @@ audio/data/librispeech_raw/LibriSpeech/dev-other/116/288045/116-288045-0000.flac
 
 Existing datasets can be copied or symlinked to those locations. To store them elsewhere, use `--out /path/to/audio-data` when downloading and `--data-root /path/to/audio-data` when training. That directory must contain `nsynth-valid/` and `librispeech_raw/` with the same structure shown above. Only the selected dataset is needed for a single-dataset run.
 
-Keep the original audio files. The training code performs resampling and takes 48,000 samples at 48 kHz. No separate conversion or preprocessing command is needed. The released LSA, FINER, SIREN, and SL2A runs use zero-mean, unit-peak waveform targets. The fJNB comparison preserves its historical preprocessing and uses decoded waveform amplitudes without this normalization.
+Keep the original audio files. The training code performs resampling and takes 48,000 samples at 48 kHz. The released LSA, FINER, SIREN, and SL2A runs use zero-mean, unit-peak waveform targets. The fJNB comparison preserves its historical preprocessing and uses decoded waveform amplitudes without this normalization.
 
 ### LSA, FINER, and SIREN
 
@@ -134,23 +134,6 @@ The output directory contains `logs/<group>.log`, per-clip `runs/<group>/<run>/s
 
 The entry points fix the released hyperparameters. Core methods run 5,000 updates with full-signal batches. fJNB uses batches of 4,096 coordinates, and SL2A uses full-signal batches. Their original loops run 5,001 updates. Core methods and SL2A use zero-mean, unit-peak targets, while fJNB retains decoded amplitudes. Each method keeps its original resampler and evaluation interval. Reported PSNR is the best evaluated value for each clip.
 
-### Check results
-
-After running every audio comparison, check the complete clip sets and their mean PSNR against `audio/reference/results.csv`:
-
-```console
-python audio/check_results.py
-```
-
-For a partial run, select the same method, dataset, and baseline setting used for training. For example:
-
-```console
-python audio/check_results.py --method lsa --dataset librispeech --output-root /path/to/audio-results
-python audio/check_results.py --method sl2a --dataset nsynth --degree 512 --rank 128
-python audio/check_results.py --method fjnb --dataset both --input raw
-```
-
-The checker writes `comparison_*.csv` to the output directory and returns a nonzero exit code for missing clips, invalid results, or a mean difference greater than 0.01 dB. Audio references contain aggregate means, so this comparison cannot establish agreement for every individual clip.
 
 ## 2D images
 
@@ -173,7 +156,7 @@ image_2d/data/kodak/kodim02.png
 image_2d/data/kodak/kodim24.png
 ```
 
-To use another location, download with `--out /path/to/kodak` and pass `--data-root /path/to/kodak` to training and result-check commands. That directory should contain the PNG files directly. Images are used at their original resolution. Do not resize or re-encode them. Training checks their SHA-256 hashes against the released dataset manifest.
+To use another location, download with `--out /path/to/kodak` and pass `--data-root /path/to/kodak` to training and result-check commands. That directory should contain the PNG files directly.
 
 ### LSA, FINER, and SIREN
 
@@ -224,25 +207,9 @@ python image_2d/run_core.py --gpus 0,1 --data-root /path/to/kodak --output-root 
 
 Pass the same data and output arguments to STAF or SL2A. They read the core results from `<output-root>/kodak_core`. Use `--core-output /path/to/kodak_core` if the core experiment is stored separately.
 
-Results are written into `kodak_core/`, `kodak_staf/`, and `kodak_sl2a/` under the output root. Each contains `runs/` with per-fit logs, metrics, and summaries, plus `<experiment>_per_image.csv` and `<experiment>_summary.json`. Completed fits with matching settings are skipped. Interrupted fits restart when the command is rerun.
 
 The YAML files in `image_2d/configs/` specify the released settings: 5,000 updates, batches of 65,536 sampled coordinates, and seed 0. The six calibration images are `kodim02`, `kodim05`, `kodim07`, `kodim10`, `kodim13`, and `kodim23`. PSNR and SSIM are evaluated on RGB values in [0, 1]. Each reported SSIM corresponds to the checkpoint with the best evaluated PSNR.
 
-### Check results
-
-After all three experiments, compare their per-image results with `image_2d/reference/`:
-
-```console
-python image_2d/check_results.py
-```
-
-To check only the core experiment, including custom locations:
-
-```console
-python image_2d/check_results.py --suite core --data-root /path/to/kodak --output-root /path/to/image-results
-```
-
-`--suite` also accepts `staf`, `sl2a`, and `all`. STAF and SL2A checks require the core outputs. If these are stored separately, pass the same `--core-output` used for training. The checker requires complete runs, matching experiment settings, and agreement with the selected LSA configuration and SL2A learning rates. It compares per-image PSNR and SSIM with tolerances of 0.02 dB and 0.002, and returns a nonzero exit code if a check fails.
 
 ## Acknowledgments
 
