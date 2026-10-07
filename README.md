@@ -2,7 +2,7 @@
 
 **Tamir Shor, Or Litany, Alex Bronstein**
 
-This repository contains the official implementation of the NeurIPS 2026 paper: [Learnable Spectral Activations](https://arxiv.org/pdf/TBD)
+This repository contains the official implementation of the NeurIPS 2026 paper: [Learnable Spectral Activations](https://arxiv.org/pdf/2610.07419)
 
 ![Teaser](images/teaser.jpg)
 
